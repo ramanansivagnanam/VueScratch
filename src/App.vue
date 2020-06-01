@@ -1,14 +1,9 @@
 <template>
   <div id="app">
     <div>
-    <router-link to="/">Home</router-link> |
-    <router-link to="about">About</router-link>
-    <h1>{{ compApitest }}</h1>
-    </div>
-    <div v-for="video in videos" :key="video.name">
-      <img :src="video.thumbnail">
-        <h3>{{ video.name }} </h3>
-       <div v-html="video.description"></div> 
+      <router-link to="/">Home</router-link>  |
+      <router-link to="/contact">About</router-link>  |
+      <router-link to="/video">Video watch</router-link>
     </div>
     <div>
       <router-view></router-view>
@@ -17,20 +12,10 @@
 </template>
 
 <script>
-import dummyArr from './assets/dummy';
-
 export default {
-  name: 'App',
-  components: {
-  },
-  setup(){
-    const videos = dummyArr;
-    const compApitest = 'Composition api is workin fine';
-    return { compApitest, videos };
-  }
-}
+  name: "App"
+};
 </script>
 
-<style>
-
+<style scoped>
 </style>
